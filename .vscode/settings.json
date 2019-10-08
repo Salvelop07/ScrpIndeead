@@ -9,6 +9,6 @@
   "python.formatting.provider": "black",
   "python.linting.pylintPath": "pylint",
   "python.pythonPath": "venv\\Scripts\\python.exe",
-  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.colorTheme": "Visual Studio Light",
   "workbench.iconTheme": "vscode-icons"
 }
