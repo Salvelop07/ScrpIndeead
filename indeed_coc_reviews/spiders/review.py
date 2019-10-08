@@ -16,10 +16,16 @@ class ReviewSpider(scrapy.Spider):
             text = "\n".join(review.css(".cmp-review-text ::text").getall())
             pros = "\n".join(review.css(".cmp-review-pro-text ::text").getall())
             cons = "\n".join(review.css(".cmp-review-con-text ::text").getall())
+            date_created = review.css(".cmp-review-date-created ::text").get()
             id = review.attrib["data-tn-entityid"]
 
             yield IndeedCompanyReviewsItem(
-                rating=rating, text=text, pros=pros, cons=cons, id=id
+                id=id,
+                rating=rating,
+                text=text,
+                pros=pros,
+                cons=cons,
+                date_created=date_created,
             )
 
         next_page = response.css(
