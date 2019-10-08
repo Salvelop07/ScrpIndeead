@@ -1,4 +1,4 @@
-# scrapy-indeed-compnay-reviews
+# scrapy-indeed-coc-reviews
 
 ## Envrionment
 
@@ -18,3 +18,7 @@
 
 Use `pip install -r requirements-dev.txt` for development.
 It will install `pylint` and `black` to enable linting and auto-formatting.
+
+## Usage
+
+    scrapy crawl review -o reviews.json

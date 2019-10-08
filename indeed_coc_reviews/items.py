@@ -9,6 +9,8 @@ import scrapy
 
 
 class IndeedCompanyReviewsItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    id = scrapy.Field()
+    rating = scrapy.Field()
+    text = scrapy.Field()
+    pros = scrapy.Field()
+    cons = scrapy.Field()

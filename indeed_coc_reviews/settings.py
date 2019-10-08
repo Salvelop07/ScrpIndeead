@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for indeed_company_reviews project
+# Scrapy settings for indeed_coc_reviews project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "indeed_company_reviews"
+BOT_NAME = "indeed_coc_reviews"
 
-SPIDER_MODULES = ["indeed_company_reviews.spiders"]
-NEWSPIDER_MODULE = "indeed_company_reviews.spiders"
+SPIDER_MODULES = ["indeed_coc_reviews.spiders"]
+NEWSPIDER_MODULE = "indeed_coc_reviews.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = 'indeed_company_reviews (+http://www.yourdomain.com)'
+# USER_AGENT = 'indeed_coc_reviews (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
-#    'indeed_company_reviews.middlewares.IndeedCompanyReviewsSpiderMiddleware': 543,
+#    'indeed_coc_reviews.middlewares.IndeedCompanyReviewsSpiderMiddleware': 543,
 # }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#    'indeed_company_reviews.middlewares.IndeedCompanyReviewsDownloaderMiddleware': 543,
+#    'indeed_coc_reviews.middlewares.IndeedCompanyReviewsDownloaderMiddleware': 543,
 # }
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 # ITEM_PIPELINES = {
-#    'indeed_company_reviews.pipelines.IndeedCompanyReviewsPipeline': 300,
+#    'indeed_coc_reviews.pipelines.IndeedCompanyReviewsPipeline': 300,
 # }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
