@@ -1,4 +1,4 @@
-# scrapy-indeed-coc-reviews
+# scrapy-indeed-company-reviews
 
 ## Envrionment
 
@@ -21,4 +21,6 @@ It will install `pylint` and `black` to enable linting and auto-formatting.
 
 ## Usage
 
-    scrapy crawl review -o reviews.json
+    $Env:indeed_company="City-of-Calgary"
+    scrapy crawl review -o reviews_$Env:indeed_company.json
+    python eda.py

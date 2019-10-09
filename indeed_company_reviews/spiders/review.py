@@ -1,13 +1,19 @@
 # -*- coding: utf-8 -*-
+import os
+
 import scrapy
 
-from indeed_coc_reviews.items import IndeedCompanyReviewsItem
+from indeed_company_reviews.items import IndeedCompanyReviewsItem
+
+company = os.getenv("indeed_company", None)
+
+assert company, "[indeed] company not set"
 
 
 class ReviewSpider(scrapy.Spider):
     name = "review"
     allowed_domains = ["ca.indeed.com"]
-    start_urls = ["https://ca.indeed.com/cmp/City-of-Calgary/reviews"]
+    start_urls = [f"https://ca.indeed.com/cmp/{company}/reviews"]
 
     def parse(self, response):
         reviews = response.css(".cmp-review")
