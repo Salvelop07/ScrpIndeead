@@ -32,7 +32,7 @@ python -m pip install -U pip setuptools
 pip install -r requirements.txt
 $Env:indeed_company="City-of-Calgary"
 scrapy crawl review -o reviews_$Env:indeed_company.json
-python eda.py
+python visualize.py
 ```
 
 See the [crawl.ps1](https://github.com/zehengl/scrapy-indeed-company-reviews/blob/master/crawl.ps1) powershell script for batching example
@@ -46,5 +46,5 @@ python -m pip install -U pip setuptools
 pip install -r requirements.txt
 export indeed_company="City-of-Calgary"
 scrapy crawl review -o reviews_$indeed_company.json
-python eda.py
+python visualize.py
 ```
