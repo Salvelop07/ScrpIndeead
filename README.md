@@ -3,6 +3,8 @@
 ![coding_style](https://img.shields.io/badge/code%20style-black-000000.svg)
 [![time tracker](https://wakatime.com/badge/github/zehengl/scrapy-indeed-company-reviews.svg)](https://wakatime.com/badge/github/zehengl/scrapy-indeed-company-reviews)
 
+A scrapy app to crawl company reviews from Indeed
+
 ## Envrionment
 
 - Python 3.6
