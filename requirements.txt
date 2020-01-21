@@ -1,0 +1,5 @@
+Flask==1.1.1
+Flask-Bootstrap4==4.0.2
+Flask-WTF==0.14.2
+gunicorn==19.9.0
+whitenoise==4.1.4
