@@ -1,4 +1,0 @@
-pandas==0.25.1
-seaborn==0.9.0
-Scrapy==1.7.3
-wordcloud==1.5.0
