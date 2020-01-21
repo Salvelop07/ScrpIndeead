@@ -49,3 +49,11 @@ pip install -r requirements-scrapy.txt
 export indeed_company="City-of-Calgary"
 scrapy crawl review -o data/reviews_$indeed_company.json
 ```
+
+## Demo
+
+See the demo app at [https://scrapy-indeed-company-reviews.herokuapp.com/](https://scrapy-indeed-company-reviews.herokuapp.com/) for some crawled company reviews
+
+## Credits
+
+- [Icon](https://www.iconfinder.com/icons/3209401/chat_commenting_more_review_typing_icon) by [Becris .](https://www.iconfinder.com/becris)
