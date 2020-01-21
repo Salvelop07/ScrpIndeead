@@ -1,7 +1,25 @@
-$companies = @("City-of-Calgary", "City-of-Edmonton", "City-of-Toronto")
+$companies = @(
+    "Calgary",
+    "Charlottetown",
+    "Edmonton",
+    "Fredericton",
+    "Halifax",
+    "Iqaluit",
+    "Montreal",
+    "Ottawa",
+    "Quebec",
+    "Regina",
+    "Saint-John",
+    "Saskatoon"
+    "Toronto"
+    "Vancouver",
+    "Victoria",
+    "Whitehorse",
+    "Winnipeg",
+    "Yellowknife"
+)
 
 foreach ($company in $companies) {
-    $Env:indeed_company = $company
-    scrapy crawl review -o reviews_$Env:indeed_company.json
+    $Env:indeed_company = "City-of-$company"
+    scrapy crawl review -o data/reviews_$Env:indeed_company.json
 }
-python visualize.py

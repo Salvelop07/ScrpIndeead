@@ -8,7 +8,7 @@ import seaborn as sns
 from wordcloud import WordCloud
 
 
-path = Path(".")
+data = Path("data")
 result = Path("result")
 result.mkdir(exist_ok=True)
 
@@ -22,7 +22,7 @@ def custom_read_json(json_file):
 
 try:
     df = pd.concat(
-        map(custom_read_json, path.glob("reviews_*.json")), ignore_index=True
+        map(custom_read_json, data.glob("reviews_*.json")), ignore_index=True
     )
 except ValueError:
     raise
