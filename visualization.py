@@ -10,6 +10,7 @@ from wordcloud import WordCloud
 
 data = Path("data")
 result = Path("result")
+static = Path("static")
 result.mkdir(exist_ok=True)
 
 
@@ -40,7 +41,7 @@ for company in companies:
         "background_color": "white",
         "width": 800,
         "height": 600,
-        "max_words": 800,
+        "max_words": 200,
         "max_font_size": 40,
     }
     text = "\n".join(data.text)
@@ -49,6 +50,7 @@ for company in companies:
     plt.imshow(wc, interpolation="bilinear")
     plt.axis("off")
     fig.savefig(result / f"{company}-wordcloud", bbox_inches="tight", dpi=300)
+    fig.savefig(static / f"{company}-wordcloud", bbox_inches="tight", dpi=300)
 
     plt.clf()
     ax = sns.countplot(x="rating", data=data)
@@ -62,11 +64,13 @@ for company in companies:
     ax = sns.countplot(x="year", hue="rating", data=data)
     plt.legend(loc="upper left")
     ax.get_figure().savefig(result / f"{company}-countplot-year-per-rating", dpi=300)
+    ax.get_figure().savefig(static / f"{company}-countplot-year-per-rating", dpi=300)
 
     plt.clf()
     ax = sns.countplot(x="rating", hue="year", data=data)
     plt.legend(loc="upper left")
     ax.get_figure().savefig(result / f"{company}-countplot-rating-per-year", dpi=300)
+    ax.get_figure().savefig(static / f"{company}-countplot-rating-per-year", dpi=300)
 
 #%%
 plt.clf()
@@ -76,4 +80,7 @@ ax = sns.barplot(
 ax.set_xticklabels(ax.get_xticklabels(), rotation=40, ha="right", fontsize=7)
 ax.get_figure().savefig(
     result / f"overall-countplot-rating", bbox_inches="tight", dpi=300
+)
+ax.get_figure().savefig(
+    static / f"overall-countplot-rating", bbox_inches="tight", dpi=300
 )
