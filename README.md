@@ -5,7 +5,7 @@
 
 A scrapy app to crawl company reviews from Indeed
 
-## Envrionment
+## Environment
 
 - Python 3.6
 
@@ -21,7 +21,7 @@ It will install `pylint` and `black` to enable linting and auto-formatting.
 
 ## Usage
 
-1. set envrionment variables for company
+1. set environment variables for company
 2. run scrapy to crawl the company reviews and save in json
 
 ## Example
