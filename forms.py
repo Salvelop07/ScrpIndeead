@@ -4,9 +4,12 @@ from wtforms import SelectField, SubmitField
 from wtforms.validators import DataRequired
 
 path = Path(".")
-forcast = sorted(path.glob("data/reviews_*.json"))
+municipalities = sorted(path.glob("data/reviews_*.json"))
 
-choices = [(p.stem.lstrip("reviews_"), p) for p in forcast]
+choices = [
+    (p.stem.lstrip("reviews_"), p.stem.lstrip("reviews_").replace("-", " "))
+    for p in municipalities
+]
 
 
 class MunicipalitySelectForm(FlaskForm):
