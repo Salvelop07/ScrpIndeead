@@ -1,5 +1,5 @@
-Flask==1.1.1
+Flask==1.1.2
 Flask-Bootstrap4==4.0.2
-Flask-WTF==0.14.2
+Flask-WTF==0.14.3
 gunicorn==20.0.4
-whitenoise==4.1.4
+whitenoise==5.0.1
