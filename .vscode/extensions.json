@@ -1,5 +1,7 @@
 {
   "recommendations": [
+    "arcticicestudio.nord-visual-studio-code",
+    "batisteo.vscode-django",
     "CoenraadS.bracket-pair-colorizer",
     "DavidAnson.vscode-markdownlint",
     "esbenp.prettier-vscode",
@@ -7,7 +9,9 @@
     "ms-vscode.wordcount",
     "njpwerner.autodocstring",
     "oderwat.indent-rainbow",
+    "streetsidesoftware.code-spell-checker",
     "tyriar.sort-lines",
-    "vscode-icons-team.vscode-icons"
+    "vscode-icons-team.vscode-icons",
+    "wmaurer.change-case"
   ]
 }
