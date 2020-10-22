@@ -16,13 +16,13 @@ class ReviewSpider(scrapy.Spider):
     start_urls = [f"https://ca.indeed.com/cmp/{company}/reviews"]
 
     def parse(self, response):
-        reviews = response.css(".cmp-review")
+        reviews = response.css(".cmp-Review-container")
         for review in reviews:
-            rating = float(review.css(".cmp-ratingNumber ::text").get())
-            text = "\n".join(review.css(".cmp-review-text ::text").getall())
-            pros = "\n".join(review.css(".cmp-review-pro-text ::text").getall())
-            cons = "\n".join(review.css(".cmp-review-con-text ::text").getall())
-            date_created = review.css(".cmp-review-date-created ::text").get()
+            rating = float(review.css(".cmp-ReviewRating-text ::text").get())
+            text = "\n".join(review.css(".cmp-Review-text ::text").getall())
+            pros = "\n".join(review.css(".cmp-ReviewProsCons-prosText ::text").getall())
+            cons = "\n".join(review.css(".cmp-ReviewProsCons-consText ::text").getall())
+            date_created = review.css(".cmp-ReviewAuthor ::text").getall()[-1]
             id = review.attrib["data-tn-entityid"]
 
             yield IndeedCompanyReviewsItem(
@@ -35,7 +35,7 @@ class ReviewSpider(scrapy.Spider):
             )
 
         next_page = response.css(
-            '.cmp-Pagination-link[data-tn-element="next-page"] ::attr(href)'
+            '.icl-Button[data-tn-element="next-page"] ::attr(href)'
         ).get()
 
         if next_page:
