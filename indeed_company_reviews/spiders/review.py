@@ -12,8 +12,8 @@ assert company, "[indeed] company not set"
 
 class ReviewSpider(scrapy.Spider):
     name = "review"
-    allowed_domains = ["ca.indeed.com"]
-    start_urls = [f"https://ca.indeed.com/cmp/{company}/reviews"]
+    allowed_domains = ["indeed.com"]
+    start_urls = [f"https://indeed.com/cmp/{company}/reviews?fcountry=ALL"]
 
     def parse(self, response):
         reviews = response.css(".cmp-Review-container")
