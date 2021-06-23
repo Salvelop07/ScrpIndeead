@@ -2,6 +2,7 @@
 import os
 
 import scrapy
+from bs4 import BeautifulSoup
 
 from indeed_company_reviews.items import IndeedCompanyReviewsItem
 
@@ -16,13 +17,27 @@ class ReviewSpider(scrapy.Spider):
     start_urls = [f"https://indeed.com/cmp/{company}/reviews?fcountry=ALL"]
 
     def parse(self, response):
-        reviews = response.css(".cmp-Review-container")
+        reviews = response.selector.xpath('//div[@data-tn-entitytype="reviewId"]')
         for review in reviews:
-            rating = float(review.css(".cmp-ReviewRating-text ::text").get())
-            text = "\n".join(review.css(".cmp-Review-text ::text").getall())
-            pros = "\n".join(review.css(".cmp-ReviewProsCons-prosText ::text").getall())
-            cons = "\n".join(review.css(".cmp-ReviewProsCons-consText ::text").getall())
-            date_created = review.css(".cmp-ReviewAuthor ::text").getall()[-1]
+            rating = float(
+                review.xpath('*//meta[@itemprop="ratingValue"]').attrib["content"]
+            )
+
+            text = BeautifulSoup(
+                review.xpath('*//span[@itemprop="reviewBody"]').get()
+            ).get_text()
+
+            find_pros = review.xpath('*//h2[text() = "Pros"]/following::*/text()')
+            pros = find_pros[0].get() if find_pros else None
+
+            find_cons = review.xpath('*//h2[text() = "Cons"]/following::*/text()')
+            cons = find_cons[0].get() if find_cons else None
+
+            date_created = (
+                BeautifulSoup(review.xpath('*//span[@itemprop="author"]').get())
+                .get_text()
+                .split(" - ")[-1]
+            )
             id = review.attrib["data-tn-entityid"]
 
             yield IndeedCompanyReviewsItem(
@@ -34,9 +49,9 @@ class ReviewSpider(scrapy.Spider):
                 date_created=date_created,
             )
 
-        next_page = response.css(
-            '.icl-Button[data-tn-element="next-page"] ::attr(href)'
-        ).get()
+        next_page = response.selector.xpath('//a[@data-tn-element="next-page"]').attrib[
+            "href"
+        ]
 
         if next_page:
             yield scrapy.Request(response.urljoin(next_page), callback=self.parse)
