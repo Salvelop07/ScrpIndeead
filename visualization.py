@@ -1,10 +1,10 @@
 #%%
-import os
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
+from tqdm import tqdm
 from wordcloud import WordCloud
 
 
@@ -29,11 +29,13 @@ except ValueError:
     raise
 else:
     df = df.drop_duplicates(["id"])
-    df = df.assign(year=df.apply(lambda r: r["date_created"].split(" ")[-1], axis=1))
+    df = df.assign(
+        year=df.apply(lambda r: int(r["date_created"].split(" ")[-1]), axis=1)
+    )
     companies = df["company"].unique()
 
 #%%
-for company in companies:
+for company in tqdm(companies):
     data = df[df["company"] == company]
 
     plt.clf()
