@@ -21,5 +21,5 @@ $companies = @(
 
 foreach ($company in $companies) {
     $Env:indeed_company = "City-of-$company"
-    scrapy crawl review -o data/reviews_$Env:indeed_company.json
+    scrapy crawl review -O data/reviews_$Env:indeed_company.json
 }
