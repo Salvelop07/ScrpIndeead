@@ -10,7 +10,7 @@ A scrapy app to crawl company reviews from Indeed
 
 ## Environment
 
-- Python 3.6
+- Python 3.9
 
 ## Install
 
@@ -37,7 +37,7 @@ python -m venv venv
 python -m pip install -U pip setuptools
 pip install -r requirements-scrapy.txt
 $Env:indeed_company="City-of-Calgary"
-scrapy crawl review -o data/reviews_$Env:indeed_company.json
+scrapy crawl review -O data/reviews_$Env:indeed_company.json
 ```
 
 See the [crawl.ps1](https://github.com/zehengl/scrapy-indeed-company-reviews/blob/master/crawl.ps1) powershell script for batching example
@@ -50,22 +50,16 @@ source venv/bin/activate
 python -m pip install -U pip setuptools
 pip install -r requirements-scrapy.txt
 export indeed_company="City-of-Calgary"
-scrapy crawl review -o data/reviews_$indeed_company.json
+scrapy crawl review -O data/reviews_$indeed_company.json
 ```
 
 ## Demo
 
 See the demo app at [https://scrapy-indeed-company-reviews.herokuapp.com/](https://scrapy-indeed-company-reviews.herokuapp.com/) for some crawled company reviews
 
-<hr>
-
-<sup>
-
 ## Credits
 
 - [Icon][1] by [Becris .][2]
-
-</sup>
 
 [1]: https://www.iconfinder.com/icons/3209401/chat_commenting_more_review_typing_icon
 [2]: https://www.iconfinder.com/becris
