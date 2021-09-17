@@ -2,4 +2,4 @@
 black==21.9b0
 jupyterlab==3.1.12
 pip-check-updates==0.5.0
-pylint==2.10.2
+pylint==2.11.1
