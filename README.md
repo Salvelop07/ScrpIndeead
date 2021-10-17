@@ -16,7 +16,7 @@ A scrapy app to crawl company reviews from Indeed
 
 1. create virtualenv
 2. activate virtualenv
-3. update pip and setuptools
+3. update pip
 4. install deps
 
 Use `pip install -r requirements-dev.txt` for development.
@@ -34,8 +34,8 @@ It will install `pylint` and `black` to enable linting and auto-formatting.
 ```powershell
 python -m venv venv
 .\venv\Scripts\activate
-python -m pip install -U pip setuptools
-pip install -r requirements-scrapy.txt
+python -m pip install -U pip
+pip install -r requirements-dev.txt
 $Env:indeed_company="City-of-Calgary"
 scrapy crawl review -O data/reviews_$Env:indeed_company.json
 ```
@@ -47,8 +47,8 @@ See the [crawl.ps1](https://github.com/zehengl/scrapy-indeed-company-reviews/blo
 ```bash
 python -m venv venv
 source venv/bin/activate
-python -m pip install -U pip setuptools
-pip install -r requirements-scrapy.txt
+python -m pip install -U pip
+pip install -r requirements-dev.txt
 export indeed_company="City-of-Calgary"
 scrapy crawl review -O data/reviews_$indeed_company.json
 ```
