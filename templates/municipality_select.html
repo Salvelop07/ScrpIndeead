@@ -1,6 +1,10 @@
 {% import "bootstrap/wtf.html" as wtf %}
+
 <form class="form form-horizontal" method="post" role="form">
+  <!-- municipality -->
   {{ wtf.form_field(form.municipality, class="form-control", size=10) }}
+  <!-- submit -->
   {{ wtf.form_field(form.submit, class="btn btn-primary") }}
+  <!-- overall comparision -->
   {% include 'overall_comparision.html' %}
 </form>

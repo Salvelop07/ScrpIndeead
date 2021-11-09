@@ -1,8 +1,5 @@
 {% for plot in plots %}
-  <div class="text-center">
-    <img
-      class="img-fluid"
-      src="{{ url_for('static', filename=plot) }}"
-    />
-  </div>
+<div class="text-center">
+  <img class="img-fluid" src="{{ url_for('static', filename=plot) }}" />
+</div>
 {% endfor %}
