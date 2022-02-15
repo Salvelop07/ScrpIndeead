@@ -2,7 +2,7 @@
 beautifulsoup4==4.10.0
 black==22.1.0
 jupyterlab==3.2.9
-pandas==1.4.0
+pandas==1.4.1
 pip-check-updates==0.8.2
 pylint==2.12.2
 Scrapy==2.5.1
