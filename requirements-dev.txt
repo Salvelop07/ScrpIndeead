@@ -1,10 +1,10 @@
 -r requirements.txt
-beautifulsoup4==4.10.0
+beautifulsoup4==4.11.1
 black==22.3.0
-jupyterlab==3.3.2
+jupyterlab==3.3.3
 pandas==1.4.2
 pip-check-updates==0.12.0
-pylint==2.13.4
+pylint==2.13.5
 Scrapy==2.6.1
 seaborn==0.11.2
 tqdm==4.64.0
