@@ -3,8 +3,8 @@ beautifulsoup4==4.11.1
 black==22.3.0
 jupyterlab==3.3.4
 pandas==1.4.2
-pip-check-updates==0.13.1
-pylint==2.13.5
+pip-check-updates==0.14.0
+pylint==2.13.7
 Scrapy==2.6.1
 seaborn==0.11.2
 tqdm==4.64.0
