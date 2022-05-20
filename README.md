@@ -32,8 +32,8 @@ It will install `pylint` and `black` to enable linting and auto-formatting.
 ### Windows
 
 ```powershell
-python -m venv venv
-.\venv\Scripts\activate
+python -m venv .venv
+.\.venv\Scripts\activate
 python -m pip install -U pip
 pip install -r requirements-dev.txt
 $Env:indeed_company="City-of-Calgary"
@@ -45,8 +45,8 @@ See the [crawl.ps1](https://github.com/zehengl/scrapy-indeed-company-reviews/blo
 ### Linux
 
 ```bash
-python -m venv venv
-source venv/bin/activate
+python -m venv .venv
+source .venv/bin/activate
 python -m pip install -U pip
 pip install -r requirements-dev.txt
 export indeed_company="City-of-Calgary"
