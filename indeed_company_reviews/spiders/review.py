@@ -15,6 +15,7 @@ class ReviewSpider(scrapy.Spider):
     name = "review"
     allowed_domains = ["indeed.com"]
     start_urls = [f"https://indeed.com/cmp/{company}/reviews?fcountry=ALL"]
+    user_agent = "Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion"
 
     def parse(self, response):
         reviews = response.selector.xpath('//div[@data-tn-entitytype="reviewId"]')
