@@ -14,7 +14,7 @@ assert company, "[indeed] company not set"
 class ReviewSpider(scrapy.Spider):
     name = "review"
     allowed_domains = ["indeed.com"]
-    start_urls = [f"https://indeed.com/cmp/{company}/reviews?fcountry=ALL"]
+    start_urls = [f"http://indeed.com/cmp/{company}/reviews?fcountry=ALL"]
     user_agent = "Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion"
 
     def parse(self, response):
