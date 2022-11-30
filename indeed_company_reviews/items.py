@@ -14,4 +14,5 @@ class IndeedCompanyReviewsItem(scrapy.Item):
     text = scrapy.Field()
     pros = scrapy.Field()
     cons = scrapy.Field()
+    position = scrapy.Field()
     date_created = scrapy.Field()

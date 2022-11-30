@@ -34,6 +34,12 @@ class ReviewSpider(scrapy.Spider):
             find_cons = review.xpath('*//h2[text() = "Cons"]/following::*/text()')
             cons = find_cons[0].get() if find_cons else None
 
+            position = (
+                BeautifulSoup(review.xpath('*//span[@itemprop="author"]').get())
+                .get_text()
+                .split(" - ")[0]
+            )
+
             date_created = (
                 BeautifulSoup(review.xpath('*//span[@itemprop="author"]').get())
                 .get_text()
@@ -47,6 +53,7 @@ class ReviewSpider(scrapy.Spider):
                 text=text,
                 pros=pros,
                 cons=cons,
+                position=position,
                 date_created=date_created,
             )
 
