@@ -55,7 +55,7 @@ scrapy crawl review -O data/reviews_$indeed_company.json
 
 ## Demo
 
-See the demo app at [https://scrapy-indeed-company-reviews.herokuapp.com/](https://scrapy-indeed-company-reviews.herokuapp.com/) for some crawled company reviews
+See the demo app at [https://indeed-municipality-reviews.streamlit.app/](https://indeed-municipality-reviews.streamlit.app/) for some crawled company reviews
 
 ## Credits
 
