@@ -6,6 +6,4 @@ pandas==1.5.3
 pip-check-updates==0.19.0
 pylint==2.16.2
 Scrapy==2.8.0
-seaborn==0.12.2
 tqdm==4.64.1
-wordcloud==1.8.2.2
