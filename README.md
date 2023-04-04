@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://cdn2.iconfinder.com/data/icons/essential-web-4/50/commenting-more-typing-chat-review-512.png" alt="logo" height="196">
+    <img src="https://cdn2.iconfinder.com/data/icons/essential-web-4/50/commenting-more-typing-chat-review-512.png" alt="logo" height="128">
 </div>
 
 # scrapy-indeed-company-reviews
@@ -19,8 +19,7 @@ A scrapy app to crawl company reviews from Indeed
 3. update pip
 4. install deps
 
-Use `pip install -r requirements-dev.txt` for development.
-It will install `pylint` and `black` to enable linting and auto-formatting.
+> Use `pip install -r requirements-dev.txt` for development.
 
 ## Usage
 
