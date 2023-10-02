@@ -4,6 +4,6 @@ black==23.9.1
 jupyterlab==4.0.6
 pandas==2.1.1
 pip-check-updates==0.22.0
-pylint==2.17.6
+pylint==2.17.7
 Scrapy==2.11.0
 tqdm==4.66.1
