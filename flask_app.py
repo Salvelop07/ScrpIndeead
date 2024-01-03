@@ -6,7 +6,6 @@ from whitenoise import WhiteNoise
 
 from forms import MunicipalitySelectForm
 
-
 app = Flask(__name__)
 Bootstrap(app)
 app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/")

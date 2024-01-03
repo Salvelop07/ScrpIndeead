@@ -1,4 +1,4 @@
-#%%
+# %%
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -6,7 +6,6 @@ import pandas as pd
 import seaborn as sns
 from tqdm import tqdm
 from wordcloud import WordCloud
-
 
 data = Path("data")
 result = Path("result")
@@ -34,7 +33,7 @@ else:
     )
     companies = df["company"].unique()
 
-#%%
+# %%
 for company in tqdm(companies):
     data = df[df["company"] == company]
 
@@ -74,7 +73,7 @@ for company in tqdm(companies):
     ax.get_figure().savefig(result / f"{company}-countplot-rating-per-year", dpi=300)
     ax.get_figure().savefig(static / f"{company}-countplot-rating-per-year", dpi=300)
 
-#%%
+# %%
 plt.clf()
 ax = sns.barplot(
     x="company", y="rating", data=df.groupby("company").mean().reset_index()
