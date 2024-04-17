@@ -1,5 +1,5 @@
 Flask==3.0.0
 Flask-Bootstrap4==4.0.2
 Flask-WTF==1.2.1
-gunicorn==21.2.0
+gunicorn==22.0.0
 whitenoise==6.5.0
