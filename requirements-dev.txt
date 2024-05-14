@@ -3,5 +3,5 @@ beautifulsoup4==4.12.3
 jupyterlab==4.2.0
 pandas==2.2.2
 pip-check-updates==0.27.0
-Scrapy==2.11.1
+Scrapy==2.11.2
 tqdm==4.66.4
