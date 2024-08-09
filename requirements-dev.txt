@@ -4,4 +4,4 @@ jupyterlab==4.2.4
 pandas==2.2.2
 pip-check-updates==0.27.0
 Scrapy==2.11.2
-tqdm==4.66.4
+tqdm==4.66.5
