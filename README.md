@@ -1,12 +1,6 @@
-<div align="center">
-    <img src="https://cdn2.iconfinder.com/data/icons/essential-web-4/50/commenting-more-typing-chat-review-512.png" alt="logo" height="128">
-</div>
+# ScrpIndeead
 
-# scrapy-indeed-company-reviews
-
-![coding_style](https://img.shields.io/badge/code%20style-black-000000.svg)
-
-A scrapy app to crawl company reviews from Indeed
+ScrpIndeead is a scrapy app that gathers company reviews from Indeed, helping you make informed career decisions! 🕷️💼✨
 
 ## Environment
 
@@ -39,7 +33,7 @@ $Env:indeed_company="City-of-Calgary"
 scrapy crawl review -O data/reviews_$Env:indeed_company.json
 ```
 
-See the [crawl.ps1](https://github.com/zehengl/scrapy-indeed-company-reviews/blob/master/crawl.ps1) powershell script for batching example
+See the [crawl.ps1](https://github.com/Salvelop07/ScrpIndeead/blob/master/crawl.ps1) powershell script for batching example
 
 ### Linux
 
